@@ -4,12 +4,10 @@ block content
   h1= title
   p Welcome to #{title}
   p Brett Favre
- form(name="add-estimation", method="post")
-        div.input
-            span.label Title
-            input(type="text", name="title")
-        div.input
-            span.label Description
-            textarea(name="description", cols="40", rows="5")
-        div.actions
-            input(type="submit", value="add")
+  
+// test
+  form(method='POST' action='/register')
+	div.form-group
+		label(for='name') Name:
+        input#name.form-control(type='text', placeholder='first and last' name='name')
+    button.btn.btn-primary(type='submit') Sign up
