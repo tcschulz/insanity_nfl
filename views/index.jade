@@ -4,8 +4,7 @@ block content
   .main.container
     .row
       .col-md-6.col-md-offset-3
-        h1.display-4.m-b-2 
-        hi #title
+        h1.display-4.m-b-2 Insanity NFL
 
         // register form
         form(method='POST' action='/register')
@@ -20,5 +19,5 @@ block content
             input#favoriteBook.form-control(type='text', placeholder='Team' name='favoriteTeam')
           div.form-group
             label(for='favoritePlayer') Favorite NFC North Player:
-            input#pw.form-control(type='password' name='favoritePlayer')
+            input#pw.form-control(type='text', placeholder='Player' name='favoritePlayer')
           button.btn.btn-primary(type='submit') Sign up
