@@ -16,6 +16,16 @@ app.post('/add_hike', hike.add_hike);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.post('/register', urlencodedParser, function (req, res){
+  var reply='';
+  reply += "<b>Your favorite team is:</b> " + req.body.team +"</p>";
+  reply += "<b>Your favorite player is:</b> " + req.body.player+"</p>"; 
+  reply += "<b>Do you like Brett Favre?</b> " + req.body.favre+"</p>";
+  reply += "<b>Do you think Aaron Rodgers is better than Brett Favre? </b>" + req.body.arod;
+  res.send(reply);
+ });
+ 
+ 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
