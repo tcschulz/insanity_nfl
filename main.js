@@ -13,6 +13,9 @@ var app = express();
 app.get('/hikes', hike.index);
 app.post('/add_hike', hike.add_hike);
 
+app.get('/register', register.index);
+app.post('/add_register', register.add_register);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
