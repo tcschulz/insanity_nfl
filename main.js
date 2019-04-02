@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 hike = require('./routes/hike');
-register = require('./routes/register');
+//register = require('./routes/register');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
