@@ -1,5 +1,6 @@
-app.post('/thank', urlencodedParser, function (req, res){
-  var reply='';
-  reply += "<b>Your favorite team is:</b> "
-  res.send(reply);
- });
+exports.index = function(req, res) {
+ res.render('register', {title: 'register'});
+};
+
+exports.add_register = function(req, res) {
+};
