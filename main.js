@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 hike = require('./routes/hike');
-//register = require('./routes/register');
+register = require('./routes/register');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -14,7 +14,7 @@ app.get('/hikes', hike.index);
 app.post('/add_hike', hike.add_hike);
 
 //app.get('/register', register.index);
-//app.post('/add_register', register.add_register);
+app.post('/add_register', register.add_register);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
